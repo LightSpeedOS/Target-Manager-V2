@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Target Manager V2/Target Manager V2.vcxproj" Id="e81923c9-c169-4141-a692-339aed8c588b" />
+</Solution>
