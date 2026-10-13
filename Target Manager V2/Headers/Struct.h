@@ -15,7 +15,9 @@ enum subMenu
 {
 	AttackOpt = 1,
 	HealOpt,
+	KillOpt,
 	ChangePosOpt,
+	Return,
 };
 
 struct Vec2
@@ -33,6 +35,7 @@ struct Entity
 {
 	string name;
 	int health;
+	static const int maxHealth = 100;
 	bool isLocal = false; 
 	Team team;
 	Vec2 positions;

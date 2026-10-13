@@ -13,6 +13,7 @@ auto main() -> int
 	vector<Entity> entities;
 	setUpEntities(entities);
 
+	Entity* pLocalPlayer = getLocalPlayer(entities);
 	Entity* currentTarget = nullptr;
 
 	int mainOption;
@@ -41,23 +42,23 @@ auto main() -> int
 		{
 
 		case ListOpt:
-			listEntities(entities);
+			listEntities(entities, pLocalPlayer);
 			break;
 
 		case FindOpt:
-
+			currentTarget = findClosest(entities, pLocalPlayer);
 			break;
 
 		case TargetOpt:
-
+			targetOption(currentTarget);
 			break;
 
 		case ClearOpt:
-
+			clearTarget(currentTarget);
 			break;
 
 		case Exit:
-
+			return 0;
 			break;
 
 		
